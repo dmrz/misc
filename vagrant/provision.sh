@@ -11,4 +11,4 @@ chsh -s `which zsh` vagrant
 apt-get install -y python3.5-dev postgresql-9.4 libpq-dev
 
 su - postgres -c "createuser -dRS vagrant"
-su - postgres -c "psql -c \"ALTER USER test WITH ENCRYPTED PASSWORD 'test';\""
+su - postgres -c "psql -c \"ALTER USER vagrant WITH ENCRYPTED PASSWORD 'vagrant';\""
