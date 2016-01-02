@@ -8,7 +8,9 @@ su - vagrant -c "pip3 install virtualenvwrapper"
 
 chsh -s `which zsh` vagrant
 
-apt-get install -y python3.5-dev postgresql-9.4 libpq-dev
+apt-get install -y python3.5-dev postgresql-9.4 libpq-dev npm libffi-dev
+
+npm install -g bower
 
 su - postgres -c "createuser -dRS vagrant"
 su - postgres -c "psql -c \"ALTER USER vagrant WITH ENCRYPTED PASSWORD 'vagrant';\""
